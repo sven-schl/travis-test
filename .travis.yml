@@ -22,3 +22,5 @@ matrix:
       env: TOXENV=flake8
     - python: 3.7
       env: TOXENV=bandit
+    - python: 3.7
+      env: TOXENV=pylint
