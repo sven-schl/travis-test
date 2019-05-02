@@ -1,10 +1,13 @@
 #!/usr/bin/env python
+"""A simple command line interface for some basic math operations."""
 import click
+
 from calculator import Calculator
 
 
 @click.group()
 def cli():
+    """Click's command line interface object."""
     pass
 
 
@@ -12,7 +15,7 @@ def cli():
 @click.argument('a', type=int)
 @click.argument('b', type=int)
 def add(a, b):
-    """Add a to b and return the sum"""
+    """Add a to b and return the sum."""
     c = Calculator()
     result = c.add(a, b)
     click.echo('{} + {} = {}'.format(a, b, result))
@@ -22,7 +25,7 @@ def add(a, b):
 @click.argument('a', type=int)
 @click.argument('b', type=int)
 def sub(a, b):
-    """Subtract b from a and return the difference"""
+    """Subtract b from a and return the difference."""
     c = Calculator()
     result = c.sub(a, b)
     click.echo('{} - {} = {}'.format(a, b, result))
@@ -32,7 +35,7 @@ def sub(a, b):
 @click.argument('a', type=int)
 @click.argument('b', type=int)
 def mul(a, b):
-    """Multiply a and b and return the product"""
+    """Multiply a and b and return the product."""
     c = Calculator()
     result = c.mul(a, b)
     click.echo('{} * {} = {}'.format(a, b, result))
@@ -42,7 +45,7 @@ def mul(a, b):
 @click.argument('a', type=int)
 @click.argument('b', type=int)
 def div(a, b):
-    """Divide a by b and return the quotient"""
+    """Divide a by b and return the quotient."""
     c = Calculator()
     result = c.div(a, b)
     click.echo('{} / {} = {}'.format(a, b, result))
